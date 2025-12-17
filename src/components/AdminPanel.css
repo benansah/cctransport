@@ -1,0 +1,67 @@
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+}
+
+.admin-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 1rem;
+  background: #ffffff;
+  box-shadow: 0 12px 24px rgba(15, 23, 42, 0.06);
+  display: grid;
+  gap: 0.6rem;
+}
+
+.admin__label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.admin-card input,
+.admin-card select,
+.admin-card textarea {
+  padding: 0.65rem 0.75rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #0b1728;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.admin-card input:focus,
+.admin-card select:focus,
+.admin-card textarea:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.admin__hint {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+}
+
+.admin__error {
+  margin: 0;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.admin__submit {
+  justify-self: start;
+}
+
+.admin__row {
+  display: grid;
+  gap: 0.35rem;
+}
+
+@media (max-width: 700px) {
+  .admin-card {
+    padding: 0.9rem;
+  }
+}
+

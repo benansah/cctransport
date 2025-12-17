@@ -1,0 +1,110 @@
+.contact {
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 14px;
+  padding: 1.5rem;
+  box-shadow: 0 12px 26px rgba(15, 23, 42, 0.08);
+}
+
+.contact__header h2 {
+  margin: 0.25rem 0;
+}
+
+.contact__lede {
+  margin: 0;
+  color: #475569;
+}
+
+.contact__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+  margin-top: 1rem;
+}
+
+.contact__card {
+  background: linear-gradient(135deg, #0f3d2e, #0b6a3a);
+  color: #f0fdf4;
+  border-radius: 12px;
+  padding: 1.25rem;
+  box-shadow: 0 10px 24px rgba(12, 58, 36, 0.22);
+}
+
+.contact__card h3 {
+  margin: 0 0 0.35rem 0;
+}
+
+.contact__card p {
+  margin: 0 0 0.5rem 0;
+}
+
+.contact__card ul {
+  margin: 0;
+  padding-left: 1.2rem;
+  line-height: 1.5;
+}
+
+.contact__form {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contact__field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.contact__field label {
+  font-weight: 600;
+  color: #1e293b;
+}
+
+.contact__field input,
+.contact__field textarea {
+  padding: 0.7rem 0.8rem;
+  border-radius: 10px;
+  border: 1px solid #cbd5e1;
+  background: #f8fafc;
+  color: #0b1728;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+.contact__field textarea {
+  resize: vertical;
+}
+
+.contact__field input:focus,
+.contact__field textarea:focus {
+  outline: none;
+  border-color: #16a34a;
+  box-shadow: 0 0 0 3px rgba(34, 197, 94, 0.2);
+}
+
+.contact__field--full {
+  grid-column: 1 / -1;
+}
+
+.contact__button {
+  justify-self: start;
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #f0fdf4;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.contact__button:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.28);
+}
+
+.contact__button:active {
+  transform: translateY(0);
+  box-shadow: 0 6px 14px rgba(22, 163, 74, 0.2);
+}
+
