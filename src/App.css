@@ -1,0 +1,167 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.page {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 0;
+}
+
+.eyebrow {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #16a34a;
+  margin-bottom: 0.5rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #1e293b;
+  margin: 0 0 1rem;
+  line-height: 1.1;
+}
+
+.lede {
+  font-size: 1.25rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.booking {
+  padding: 4rem 0;
+}
+
+.booking__header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.booking__header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.booking__header p {
+  color: #64748b;
+  font-size: 1.125rem;
+}
+
+.stepper {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.step {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  background: #f1f5f9;
+  color: #64748b;
+  font-weight: 500;
+  transition: background 150ms ease;
+}
+
+.step.active {
+  background: #16a34a;
+  color: #f0fdf4;
+}
+
+.step-panel {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.why {
+  padding: 4rem 0;
+  background: #f8fafc;
+}
+
+.why__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.why__header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e293b;
+  margin: 0 0 1rem;
+}
+
+.why__header p {
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.why__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.why__card {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+
+.why__card h3 {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1e293b;
+  margin: 0 0 0.5rem;
+}
+
+.why__card p {
+  color: #64748b;
+  line-height: 1.6;
+}
+
+.why__cta {
+  text-align: center;
+}
+
+.primary-button {
+  padding: 0.8rem 1.6rem;
+  border: none;
+  border-radius: 12px;
+  background: linear-gradient(135deg, #16a34a, #22c55e);
+  color: #f0fdf4;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 120ms ease, box-shadow 120ms ease, background 120ms ease;
+}
+
+.primary-button:hover {
+  background: linear-gradient(135deg, #15803d, #16a34a);
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(22, 163, 74, 0.3);
+}
+
+.primary-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
+}
+
+
