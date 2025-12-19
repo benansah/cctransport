@@ -51,7 +51,7 @@ function Navbar({ onNavigate }) {
         </li>
         <li>
           <a href="#contact" onClick={(e) => go(e, 'home')}>
-            Contact Us
+            Contact Use
           </a>
         </li>
         <li>
