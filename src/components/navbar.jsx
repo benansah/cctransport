@@ -1,12 +1,12 @@
 
 
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+// import { Link, useNavigate } from 'react-router-dom'
 import './navbar.css'
 
 function Navbar({ onNavigate }) {
   const [open, setOpen] = useState(false)
-  const navigate = useNavigate()
+//   const navigate = useNavigate()
 
   const go = (event, target) => {
     if (onNavigate) {
@@ -16,11 +16,11 @@ function Navbar({ onNavigate }) {
     setOpen(false)
   }
 
-  const goAdmin = (event) => {
-    event.preventDefault()
-    navigate('/admin')
-    setOpen(false)
-  }
+//   const goAdmin = (event) => {
+//     event.preventDefault()
+//     navigate('/admin')
+//     setOpen(false)
+//   }
 
   return (
     <nav className="navbar">
@@ -51,13 +51,13 @@ function Navbar({ onNavigate }) {
         </li>
         <li>
           <a href="#contact" onClick={(e) => go(e, 'home')}>
-            Contact Use
+            Contact Us
           </a>
         </li>
         <li>
-          <a href="#admin" onClick={goAdmin}>
+          {/* <a href="#admin" onClick={goAdmin}>
             Admin
-          </a>
+          </a> */}
         </li>
       </ul>
     </nav>
