@@ -3,6 +3,14 @@
   grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
 }
+@media screen and (max-width: 1000px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  
+}
 
 .admin-card h3 {
   font-size: 1.5rem;
@@ -57,7 +65,12 @@
 }
 
 .admin__submit {
+  height: 4rem;
   justify-self: start;
+  position: relative;
+  bottom: 0;
+  margin: auto;
+  margin-top: 1rem;
 }
 
 .admin__row {

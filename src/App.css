@@ -9,6 +9,7 @@
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 1rem;
+  background-color: antiquewhite;
 }
 
 .hero {
@@ -164,4 +165,6 @@
   box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
 }
 
-
+@media screen {
+  
+}

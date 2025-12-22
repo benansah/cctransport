@@ -44,11 +44,11 @@ export default function AdminPage () {
     return (
         <div className="flex items-center justify-center min-h-screen bg-gray-100">
             <div className="text-center">
-                <h1 className="text-3xl mb-4">Admin Dashboard</h1>
-                <div className="space-x-4">
-                    <Link to="/admin/bookings" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600">View Bookings</Link>
-                    <Link to="/admin/settings" className="bg-green-500 text-white p-2 rounded hover:bg-green-600">Settings</Link>
-                    <Link to="/admin/analytics" className="bg-purple-500 text-white p-2 rounded hover:bg-purple-600">Analytics</Link>
+                <h1 className="text-4xl font-bold mb-6">Admin Dashboard</h1>
+                <div className="grid grid-cols-1 gap-4 space-x-4 m-4">
+                    <Link to="/admin/bookings" className="bg-blue-500 text-white p-2 rounded hover:bg-blue-600 w-full">View Bookings</Link>
+                    <Link to="/admin/settings" className="bg-green-500 text-white p-2 rounded hover:bg-green-600 w-full">Settings</Link>
+                    <Link to="/admin/analytics" className="bg-purple-500 text-white p-2 rounded hover:bg-purple-600 w-full">Analytics</Link>
                 </div>
                 <button onClick={handleLogout} className="bg-red-500 text-white p-2 rounded hover:bg-red-600 mt-4">
                     Logout

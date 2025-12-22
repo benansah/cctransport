@@ -65,7 +65,10 @@ function AdminPanel() {
   }
 
   const deleteRoute = async (id) => {
-    const { error } = await supabase.from('routes').delete().eq('id', id)
+    const { error } = await supabase
+    .from('routes')
+    .delete()
+    .eq('id', id)
     if (error) console.error(error)
     else refetchData()
   }
