@@ -8,13 +8,23 @@
 .page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 1rem;
-  background-color: antiquewhite;
+  padding: 0 3rem;
+  padding-top: 2rem;
+  background-color: #c5c4c4bc;
+  padding-bottom: 4rem;
+  border-radius: 14px;
 }
 
 .hero {
   text-align: center;
   padding: 4rem 0;
+}
+
+.heromain {
+  background: #f8fafc;
+  padding: 4rem 0;
+  border-radius: 14px;
+  margin-bottom: 4rem;
 }
 
 .eyebrow {
@@ -80,7 +90,7 @@
 }
 
 .step.active {
-  background: #16a34a;
+  background: #22a316;
   color: #f0fdf4;
 }
 
@@ -92,6 +102,7 @@
 .why {
   padding: 4rem 0;
   background: #f8fafc;
+  border-radius: 14px;
 }
 
 .why__header {

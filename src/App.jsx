@@ -152,6 +152,8 @@ function Home() {
 
   return (
     <main className="page">
+      <section className='heromain'>
+
       <section className="hero" id="home">
         <p className="eyebrow">Plan your trip</p>
         <h1>Book your next bus ride in minutes</h1>
@@ -207,6 +209,8 @@ function Home() {
             />
           </div>
         )}
+      </section>
+
       </section>
 
       <section className="why">
