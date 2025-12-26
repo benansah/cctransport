@@ -273,6 +273,9 @@ function Home() {
         </div>
       </section>
       <Contact />
+      <div className="footer">
+        hello listern to me 
+      </div>
     </main>
   )
 }
