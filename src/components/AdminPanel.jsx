@@ -29,6 +29,7 @@ function AdminPanel() {
   const [routeTo, setRouteTo] = useState('')
   const [routePrice, setRoutePrice] = useState('')
   const [seatLabel, setSeatLabel] = useState('')
+  const [seatNumber, setSeatNumber] = useState('')
   const [editingLocation, setEditingLocation] = useState(null)
   const [editingRoute, setEditingRoute] = useState(null)
   const [editingBus, setEditingBus] = useState(null)
@@ -153,16 +154,22 @@ function AdminPanel() {
   const handleAddSeat = async (event) => {
     event.preventDefault()
     const trimmed = seatLabel.trim()
+    const seats = parseInt(seatNumber)
+
     if (!trimmed) return
     const { data: existing } = await supabase.from('buses').select('id').eq('type', trimmed).single()
     if (existing) {
       alert('Bus type already exists')
       return
     }
-    const { error } = await supabase.from('buses').insert({ type: trimmed, total_seats: 50 }) // default seats
-    if (error) console.error(error)
+    const { error } = await supabase.from('buses').insert({ type: trimmed, total_seats: seats }) // set seats to take seat number form the add seat number input by the admin 
+    if (error) {
+      alert('Error adding bus type')
+      console.error(error)
+    }
     else {
       setSeatLabel('')
+      setSeatNumber('')
       refetchData()
     }
   }
@@ -267,6 +274,16 @@ function AdminPanel() {
           value={seatLabel}
           onChange={(e) => setSeatLabel(e.target.value)}
           placeholder="e.g., 50 seater"
+          required
+        />
+        {/* seat number */}
+        <n />
+        Insert Number of Seats here
+        <input
+          id="seat-number"
+          value={seatNumber}
+          onChange={(e) => setSeatNumber(e.target.value)}
+          placeholder="e.g., 50 seats"
           required
         />
         <button type="submit" className="primary-button admin__submit">

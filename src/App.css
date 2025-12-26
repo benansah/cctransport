@@ -3,57 +3,114 @@
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
+  background-color: #242425;
 }
 
 .page {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 3rem;
-  padding-top: 2rem;
-  background-color: #c5c4c4bc;
+  padding: 0 0rem;
+  padding-top: 0rem;
+  background-color: transparent;
   padding-bottom: 4rem;
   border-radius: 14px;
 }
 
 .hero {
   text-align: center;
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  background-color: transparent;
+  margin-top: 1px;
+  border-radius: 11px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .heromain {
-  background: #f8fafc;
-  padding: 4rem 0;
-  border-radius: 14px;
-  margin-bottom: 4rem;
+  /* background: linear-gradient(45deg ,#064420,#194f2d, #2b6a42); */
+  background-image: linear-gradient(270deg, #064420, #194f2d, #2b6a42, #064420);
+  /* padding: 4rem 2rem; */
+  border-radius: 14px 14px 20px 20px;
+  background-size: 400% 400%;
+  margin-bottom: 2rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  animation: hero-gradient 10s ease infinite;
 }
+
+@keyframes hero-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+  
+}
+
+.herobuttons {
+  margin-top: 2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+
+#hero-contact {
+  background: transparent;
+  border: 2px solid #f0fdf4;
+  color: #f0fdf4;
+}
+
+@media screen and (max-width: 800px) {
+  .heromain {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* .hero img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 14px;
+  margin-bottom: 2rem;
+} */
 
 .eyebrow {
   font-size: 0.875rem;
   font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
-  color: #16a34a;
+  color: #E4EFE7;
   margin-bottom: 0.5rem;
 }
 
 .hero h1 {
   font-size: 3rem;
   font-weight: 800;
-  color: #1e293b;
+  color: #FDFAF6;
   margin: 0 0 1rem;
   line-height: 1.1;
 }
 
 .lede {
-  font-size: 1.25rem;
-  color: #64748b;
+  font-size: 1.1rem;
+  color: white;
   max-width: 600px;
   margin: 0 auto 2rem;
+  margin-top:30px;
   line-height: 1.6;
 }
 
 .booking {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
+  border-radius: 20px;
+  background-color: white;
 }
 
 .booking__header {
@@ -90,7 +147,7 @@
 }
 
 .step.active {
-  background: #22a316;
+  background: #064420;
   color: #f0fdf4;
 }
 
@@ -100,7 +157,7 @@
 }
 
 .why {
-  padding: 4rem 0;
+  padding: 4rem 2rem;
   background: #f8fafc;
   border-radius: 14px;
 }
@@ -135,7 +192,17 @@
   padding: 2rem;
   background: #fff;
   border-radius: 12px;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 120ms ease, box-shadow 120ms ease;
+}
+.why__card:hover {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  cursor: pointer;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+  transform: translateY(-2px);
+  background-color: hsl(0, 0%, 99%);
 }
 
 .why__card h3 {

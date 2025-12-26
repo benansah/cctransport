@@ -42,8 +42,8 @@ function Contact() {
           <p>We’re available Monday to Saturday, 8am – 8pm.</p>
           <ul>
             <li>Email: support@cctransport.com</li>
-            <li>Phone: +234 800 000 0000</li>
-            <li>WhatsApp: +234 800 000 0000</li>
+            <li>Phone: +233 55 050 7971</li>
+            <li>WhatsApp: 233 55 050 7971</li>
           </ul>
         </div>
 

@@ -81,12 +81,14 @@ function Home() {
     console.log('handlePay called with totalPrice:', totalPrice)
     console.log('booking:', booking)
     console.log('seat:', seat)
+
     // Save booking to Supabase
     const route = routes.find(r => r.from === booking.from && r.to === booking.to)
     console.log('route found:', route)
     const bus = buses.find(b => b.type === seat)
     console.log('bus found:', bus)
     if (route && bus) {
+
       // Clean up expired unpaid bookings
       await supabase.from('bookings').delete().eq('if_paid', false).lt('hold_until', new Date().toISOString())
       
@@ -139,6 +141,7 @@ function Home() {
         console.error('PaystackPop not available')
       }
     } else {
+      alert('Route not available. Please go back and modify your booking details.')
       console.error('Route or bus not found')
     }
   }
@@ -147,6 +150,16 @@ function Home() {
     if (step === 'seats') setStep('details')
     else if (step === 'payment') setStep('seats')
   }
+
+  //bus filtering based on route
+  const filteredBuses = buses.filter(bus => {
+    // Add your filtering logic here based on the selected route
+    return bus.type.split('_')[0] == booking?.to;
+     // Placeholder: return all buses for now
+  });
+  //console.log('Filtered Buses:', filteredBuses, booking?.to);
+
+  // console.log(buses[0]?.type.split('_')[0]);
 
   if (loading) return <div>Loading...</div>
 
@@ -161,6 +174,17 @@ function Home() {
           Intercity, shuttle, and airport rides with trusted operators.
           Reserve seats, choose pickup points, and get instant confirmations.
         </p>
+
+        <div className="herobuttons">
+        <a className="primary-button" id="hero-book" href="#services">
+          Book your seat now
+        </a>
+        <a className="primary-button"  id="hero-contact"href="#contact">
+         Contact Us
+        </a>
+          
+        </div>
+        
       </section>
 
       <section className="booking" id="services">
@@ -186,9 +210,15 @@ function Home() {
           </div>
         )}
         {step === 'seats' && (
+          <>
           <div className="step-panel" key="seats">
-            <SeatSelection onSubmit={handleSeatSelect} onBack={handleBack} seats={buses.map(b => b.type)} />
+            <SeatSelection onSubmit={handleSeatSelect} onBack={handleBack} seats={filteredBuses.map(b => b.type)} filteredbuses={filteredBuses} availseats={filteredBuses.map(b => b.total_seats)}
+            />
           </div>
+          <div>
+            <p>Note: Bus types are named as [Destination]_[Seater], e.g., Ho_50seater means a 50-seater bus going to Ho.</p>
+          </div>
+          </>
         )}
         {step === 'payment' && (
           <div className="step-panel" key="payment">
