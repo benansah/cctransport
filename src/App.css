@@ -1,7 +1,7 @@
 #root {
-  max-width: 98vw;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0;
+  padding: 2rem;
   text-align: center;
   background-color: #242425;
 }
@@ -243,11 +243,11 @@
   box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
 }
 
-.footer {
+/* .footer {
   background: rgb(187, 70, 70);
-  position: relative;
+  position: absolute;
   bottom: 0px;
-}
+} */
 @media screen {
   
 }
