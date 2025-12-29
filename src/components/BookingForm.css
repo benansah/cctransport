@@ -69,3 +69,6 @@
   box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
 }
 
+#price {
+  color: red;
+}

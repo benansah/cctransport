@@ -126,9 +126,9 @@ function BookingForm({ onSubmit, locations = [], routes = [] }) {
           onChange={handleChange}
         />
       </div>
-      <div className="field">
-        <label htmlFor="price">Price*</label>
-        <>The price of your trip is: {totalPrice} cedis</>
+      <div className="field" id='price'>
+        <label htmlFor="price"></label>
+      <>{ totalPrice!=0 ?`Your total price is: ${totalPrice} GHS`: ""}</>
       </div>
       <button type="submit" className="primary-button">
         Next

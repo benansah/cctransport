@@ -119,8 +119,9 @@ function Home() {
       // Setup Paystack
       if (typeof PaystackPop !== 'undefined') {
         const paystack = new PaystackPop();
+        const publicKey = import.meta.env.VITE_PAYSTACK_PUBLIC_KEY;
         paystack.newTransaction({
-          key: 'pk_test_f797bac4e2b254971cd9300b0f173c6255a0701d', // Test public key
+          key: publicKey, // Test public key
           email: booking.email,
           amount: totalPrice * 100, // in kobo
           onSuccess: async (transaction) => {
@@ -130,6 +131,7 @@ function Home() {
             setStep('details')
             setBooking(null)
             setSeat(null)
+            
           },
           onCancel: () => {
             console.log('Payment closed')
@@ -163,6 +165,11 @@ function Home() {
 
   if (loading) return <div>Loading...</div>
 
+  const year = () => {
+    let now = new Date()
+    return now.getFullYear()
+  }
+
   return (
     <main className="page">
       <section className='heromain'>
@@ -177,7 +184,7 @@ function Home() {
 
         <div className="herobuttons">
         <a className="primary-button" id="hero-book" href="#services">
-          Book your seat now
+          Book Seat 
         </a>
         <a className="primary-button"  id="hero-contact"href="#contact">
          Contact Us
@@ -274,7 +281,7 @@ function Home() {
       </section>
       <Contact />
       <div className="footer">
-        hello listern to me 
+        <p>&copy; {year()} || C&C Transporrt Services. || All rights reserved.</p>
       </div>
     </main>
   )

@@ -1,7 +1,7 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 2rem 5px;
   text-align: center;
   background-color: #242425;
 }
@@ -71,7 +71,19 @@
   .heromain {
     grid-template-columns: 1fr;
   }
+
+  .lede {
+    display: none;
+  }
   
+  .herobuttons > .primary-button {
+    grid-template-columns: 1fr 1fr;
+    border-radius: 40px;
+  
+  }
+  .herobuttons {
+    margin-top: 3rem ;
+  }
 }
 
 /* .hero img {
@@ -243,11 +255,9 @@
   box-shadow: 0 4px 10px rgba(22, 163, 74, 0.2);
 }
 
-/* .footer {
-  background: rgb(187, 70, 70);
-  position: absolute;
-  bottom: 0px;
-} */
+.footer {
+  color: white;
+}
 @media screen {
   
 }
