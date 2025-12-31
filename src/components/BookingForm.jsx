@@ -106,11 +106,12 @@ function BookingForm({ onSubmit, locations = [], routes = [] }) {
           <option value="" disabled>
             Select destination
           </option>
-          {locations.map((loc) => (
+          <option value="UHAS"> UHAS</option>
+          {/* {locations.map((loc) => (
             <option key={loc} value={loc}>
               {loc}
             </option>
-          ))}
+          ))} */}
         </select>
       </div>
 

@@ -156,7 +156,8 @@ function Home() {
   //bus filtering based on route
   const filteredBuses = buses.filter(bus => {
     // Add your filtering logic here based on the selected route
-    return bus.type.split('_')[0] == booking?.to;
+   // return bus.type.split('_')[0] == booking?.to;
+    return bus.type == booking?.from;
      // Placeholder: return all buses for now
   });
   //console.log('Filtered Buses:', filteredBuses, booking?.to);
